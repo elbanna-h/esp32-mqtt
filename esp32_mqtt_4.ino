@@ -53,7 +53,7 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 };
 
 
-const char* ssid = "islam";
+const char* ssid = "HANY";
 const char* password = "12345678";
 
 const char* awsEndpoint = "a261cxy6nskbn1-ats.iot.us-east-1.amazonaws.com";
@@ -203,7 +203,7 @@ void loop() {
 
   pubSubCheckConnect();
 
-  if (millis() - lastPublish > 3000) {
+  if (millis() - lastPublish > 1000) {
 
     String msg = String(myString);
     boolean result = pubSubClient.publish("outTopic", msg.c_str());
